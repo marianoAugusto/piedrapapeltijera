@@ -9,10 +9,29 @@
         function aleatorio (min, max) {
             return Math.floor(Math.random() * (max - min + 1) + min)
         }
+
+        function eleccion(jugada) {
+            let resultado = ""
+            if(jugada == 1) {
+                resultado = "piedra 🪨"
+        }   else if (jugada == 2) {
+                resultado = "papel 🧻"
+        }   else if (jugada == 3) {
+                resultado = "tijera ✂️"
+        }
+            else {
+                resultado = "Mal elegido"
+            }
+            return resultado
+        }
+
         // 1 es piedra, 2 es papel y 3 es tijera
         let jugador = 0
         let pc = aleatorio(1,3)
         jugador = prompt("elige: 1 para piedra, 2 para papel 3 para tijera")
+
+        alert("PC elige: " + eleccion(pc))
+        alert("Tú eliges: " + eleccion(jugador))
         //alert("elegiste " + jugador)
         if(jugador == 1) {
             alert("elegiste piedra 🪨")
